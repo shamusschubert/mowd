@@ -9,8 +9,12 @@ namespace mowd.quote.Models
 {
     public class RequestModel
     {
-        [JsonIgnore()]
-        public Guid Id { get; private set; }
+        private readonly Guid _id;
+
+
+        #region props
+        [JsonProperty("id")]
+        public Guid Id { get { return _id; } }
 
         [JsonProperty("address")]
         public string Address { get; set; }
@@ -52,5 +56,11 @@ namespace mowd.quote.Models
 
         [JsonProperty("specialInstructions")]
         public string SpecialInstructions { get; set; }
+        #endregion
+
+        public RequestModel()
+        {
+            this._id = Guid.NewGuid();
+        }
     }
 }
