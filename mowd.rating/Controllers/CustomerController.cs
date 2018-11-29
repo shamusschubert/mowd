@@ -7,15 +7,31 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace mowd.rating.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
     {
         [HttpGet()]
-        [Route("api/customer/{id}")]
-        public async Task<IActionResult> GetCustomerRatingById(Guid Id)
+        [ActionName("GetCustomerRating")]
+        [Route("customer")]
+        public async Task<IActionResult> GetCustomerRating()
         {
-            return Ok();
+            List<int> list = new List<int>();
+
+            for(int i = 0;i<100;i++)
+            {
+                list.Add(i);
+            }
+
+            return Ok(list);
+        }
+
+
+        [HttpGet()]
+        [ActionName("GetCustomerRatingById")]
+        [Route("customer/{id}")]
+        public async Task<IActionResult> GetCustomerRatingById(Guid id)
+        {
+            return Ok(id);
         }
     }
 }

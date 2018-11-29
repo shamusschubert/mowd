@@ -11,10 +11,10 @@ namespace mowd.rating.Controllers
     public class WorkerController : ControllerBase
     {
         [HttpGet()]
-        [Route("api/worker/{id}")]
-        public async Task<IActionResult> GetWorkerRatingById(Guid Id)
+        [Route("worker/{id}")]
+        public async Task<IActionResult> GetWorkerRatingById(Guid id)
         {
-            return Ok();
+            return Ok("One worker rating");
         }
     }
 }

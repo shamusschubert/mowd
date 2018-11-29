@@ -12,7 +12,7 @@ namespace mowd.quote.Controllers
     public class RequestController : ControllerBase
     {
         [HttpGet()]
-        [Route("api/requests")]
+        [Route("request")]
         public async Task<IActionResult> ListRequests()
         {
             var results = new List<RequestModel>();
@@ -25,14 +25,14 @@ namespace mowd.quote.Controllers
         }
 
         [HttpGet()]
-        [Route("api/requests/{id}")]
+        [Route("request/{id}")]
         public async Task<IActionResult> GetRequestById(Guid id)
         {
             return Ok();
         }
 
         [HttpPost()]
-        [Route("api/requests")]
+        [Route("request")]
         public async Task<IActionResult> CreateRequest([FromBody]RequestModel Model)
         {
             if(ModelState.IsValid)
@@ -46,8 +46,8 @@ namespace mowd.quote.Controllers
         }
 
         [HttpDelete()]
-        [Route("api/requests")]
-        public async Task<IActionResult> DeleteRequest(Guid Id)
+        [Route("request")]
+        public async Task<IActionResult> DeleteRequest(Guid id)
         {
             return StatusCode(StatusCodes.Status204NoContent);
         }

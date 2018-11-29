@@ -12,29 +12,29 @@ namespace mowd.quote.Controllers
     public class BidController : ControllerBase
     {
         [HttpGet()]
-        [Route("api/bids")]
+        [Route("bid")]
         public async Task<IActionResult> ListBids()
         {
             return Ok();
         }
 
         [HttpGet()]
-        [Route("api/bids/{id}")]
-        public async Task<IActionResult> GetBidById(Guid Id)
+        [Route("bid/{id}")]
+        public async Task<IActionResult> GetBidById(Guid id)
         {
             return Ok();
         }
 
         [HttpPost()]
-        [Route("api/bids")]
+        [Route("bid")]
         public async Task<IActionResult> CreateBid([FromBody]BidModel Model)
         {
             return Created("", Model);
         }
 
         [HttpDelete()]
-        [Route("api/bids")]
-        public async Task<IActionResult> DeleteBid(Guid Id)
+        [Route("bid")]
+        public async Task<IActionResult> DeleteBid(Guid id)
         {
             return StatusCode(StatusCodes.Status204NoContent);
         }
