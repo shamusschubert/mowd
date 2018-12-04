@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="1b85be72-2fd1-421e-823a-59dcc426e6fd" ChangeDateTime="12/04/2018 14:43:39">
+    <Property Name="ElementName" Value="[dbo].[Requests].[BLow]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Requests]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Blow" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="69f209f6-5895-450a-ad99-59e359913a3a" ChangeDateTime="12/04/2018 14:43:56">
+    <Property Name="ElementName" Value="[dbo].[Requests].[SpecialInstructions]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Requests]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Pets" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fba3658f-8a70-40b0-9593-931af29127cf" ChangeDateTime="12/04/2018 14:45:16">
+    <Property Name="ElementName" Value="[dbo].[Requests].[NoLaterThank]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Requests]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NoLaterThan" />
+  </Operation>
+</Operations>
