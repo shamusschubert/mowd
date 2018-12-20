@@ -27,7 +27,7 @@ namespace mowd.quote.Controllers
 
         [HttpPost()]
         [Route("bid")]
-        public async Task<IActionResult> CreateBid([FromBody]BidModel Model)
+        public async Task<IActionResult> CreateBid([FromBody]Bid Model)
         {
             return Created("", Model);
         }

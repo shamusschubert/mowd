@@ -15,11 +15,7 @@ namespace mowd.quote.Controllers
         [Route("request")]
         public async Task<IActionResult> ListRequests()
         {
-            var results = new List<RequestModel>();
-
-            results.Add(new RequestModel { Address = "123 Main Street", Blow = true, City = "Matthews", Edge = true, Mow = true, NeedBy = new DateTime(2018, 11, 29), NoEarlierThan = 9, NoLaterThan = 18, Pets = true, Phone = "7049994363", PostalCode = "28104", SpecialInstructions = "Make sure to close gate", State = "NC" });
-            results.Add(new RequestModel { Address = "123 Main Street", Blow = true, City = "Matthews", Edge = true, Mow = true, NeedBy = new DateTime(2018, 11, 29), NoEarlierThan = 9, NoLaterThan = 18, Pets = true, Phone = "7049994363", PostalCode = "28104", SpecialInstructions = "Make sure to close gate", State = "NC" });
-            results.Add(new RequestModel { Address = "123 Main Street", Blow = true, City = "Matthews", Edge = true, Mow = true, NeedBy = new DateTime(2018, 11, 29), NoEarlierThan = 9, NoLaterThan = 18, Pets = true, Phone = "7049994363", PostalCode = "28104", SpecialInstructions = "Make sure to close gate", State = "NC" });
+            var results = new List<Request>();
 
             return Ok(results);
         }
@@ -33,7 +29,7 @@ namespace mowd.quote.Controllers
 
         [HttpPost()]
         [Route("request")]
-        public async Task<IActionResult> CreateRequest([FromBody]RequestModel Model)
+        public async Task<IActionResult> CreateRequest([FromBody]Request Model)
         {
             if(ModelState.IsValid)
             {

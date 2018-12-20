@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mowd.quote.Models
 {
-    public class BidModel
+    public class Bid
     {
         [JsonProperty("requestId")]
         public Guid RequestId { get; set; }

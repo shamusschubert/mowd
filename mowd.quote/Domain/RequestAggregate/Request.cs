@@ -4,29 +4,20 @@ using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using mowd.quote.Domain.RequestAggregate;
 
 namespace mowd.quote.Models
 {
-    public class RequestModel
+    public class Request
     {
         private readonly Guid _id;
-
 
         #region props
         [JsonProperty("id")]
         public Guid Id { get { return _id; } }
 
         [JsonProperty("address")]
-        public string Address { get; set; }
-
-        [JsonProperty("city")]
-        public string City { get; set; }
-
-        [JsonProperty("state")]
-        public string State { get; set; }
-
-        [JsonProperty("postalCode")]
-        public string PostalCode { get; set; }
+        public Address Address { get; private set; }
 
         [JsonProperty("phone")]
         public string Phone { get; set; }
@@ -58,9 +49,19 @@ namespace mowd.quote.Models
         public string SpecialInstructions { get; set; }
         #endregion
 
-        public RequestModel()
+        public Request(Address address, string phone, bool mow, bool edge, bool blow, bool pets, DateTime needBy, int noEarlierThan, int noLaterThan, string specialInstructions)
         {
             this._id = Guid.NewGuid();
+            Address = address;
+            Phone = phone;
+            Mow = mow;
+            Edge = edge;
+            Blow = blow;
+            Pets = pets;
+            NeedBy = needBy;
+            NoEarlierThan = noEarlierThan;
+            NoLaterThan = noLaterThan;
+            SpecialInstructions = specialInstructions;
         }
     }
 }
